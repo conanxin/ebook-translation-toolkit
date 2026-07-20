@@ -1,0 +1,42 @@
+:root { color-scheme: light; --paper:#fffdf7; --ink:#26231e; --muted:#725f49; --rule:#cdbb9f; }
+* { box-sizing:border-box; }
+html { background:#e8e3d9; }
+body { margin:0; color:var(--ink); font-family:"Noto Serif SC","Source Han Serif SC","Microsoft YaHei","SimSun",serif; font-style:normal; }
+body *, .semantic-emphasis, figcaption, .footnote-popover, .latin { font-style:normal; }
+.reader-toolbar { position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.65rem max(1rem,calc((100vw - 780px)/2)); background:rgba(38,35,30,.94); color:white; }
+.reader-toolbar button { border:1px solid #fff8; border-radius:999px; padding:.45rem .85rem; background:#fff1; color:white; cursor:pointer; }
+.reader-toolbar button:focus-visible, .footnote-trigger:focus-visible, .footnote-close:focus-visible { outline:3px solid #66b5e3; outline-offset:2px; }
+.book { padding:2rem 1rem 4rem; }
+.page { position:relative; width:min(780px,calc(100vw - 2rem)); min-height:1100px; margin:0 auto 2rem; padding:70px 78px 72px; overflow-wrap:anywhere; background:var(--paper); box-shadow:0 8px 30px #30291d33; }
+.running-head { position:absolute; top:25px; left:78px; right:78px; color:var(--muted); font-size:.76rem; letter-spacing:.08em; border-bottom:1px solid var(--rule); padding-bottom:.45rem; }
+.page-number { position:absolute; bottom:24px; left:0; right:0; text-align:center; color:var(--muted); font-size:.82rem; }
+.page-content { font-size:17px; line-height:1.9; text-align:justify; }
+.page-content p { margin:0 0 1.05em; text-indent:2em; }
+.page-content h2 { margin:1.5em 0 .75em; font-size:1.45em; line-height:1.35; }
+.page-content blockquote { margin:1.1em 1.6em; color:#4e4336; }
+.quote-attribution { margin-top:-.55em !important; text-indent:0 !important; text-align:right; color:#5b4d3c; font-size:.9em; }
+.page-anchor { display:inline-block; width:0; height:1em; margin:0; border-left:1px solid #aa9474; vertical-align:-.1em; }
+figure { max-width:100%; margin:1.5rem auto; break-inside:avoid; page-break-inside:avoid; text-align:center; }
+figure img { display:block; max-width:100%; height:auto; margin:0 auto; }
+figcaption, .figure-caption { margin:.65rem auto 0; max-width:90%; color:#5b4d3c; font-size:.86em; line-height:1.55; text-align:left; text-indent:0; }
+.footnote-ref { line-height:0; }
+.footnote-trigger { appearance:none; border:0; padding:0 .08em; background:transparent; color:#72532e; font:inherit; font-size:.72em; font-weight:700; line-height:1; vertical-align:super; cursor:pointer; }
+.footnote-trigger:hover, .footnote-trigger[aria-expanded="true"] { color:#145f86; text-decoration:underline; text-underline-offset:2px; }
+.footnote-trigger[aria-expanded="true"] { position:relative; z-index:110; }
+.footnote-popover { position:fixed; z-index:100; width:min(430px,calc(100vw - 24px)); max-height:min(60vh,430px); overflow:auto; padding:1rem 2.5rem 1rem 1rem; border:1px solid #a98c66; border-radius:10px; background:#fffdf7; color:#29251f; box-shadow:0 15px 45px #1c160e55; font-size:15px; line-height:1.72; overflow-wrap:anywhere; user-select:text; }
+.footnote-popover[hidden] { display:none; }
+.footnote-popover p { margin:0; }
+.footnote-close { position:absolute; top:.35rem; right:.45rem; width:2rem; height:2rem; border:0; background:transparent; color:#554737; font-size:1.4rem; cursor:pointer; }
+body.continuous-mode .book { padding-top:1rem; }
+body.continuous-mode .page { width:min(860px,calc(100vw - 2rem)); min-height:0; margin:0 auto; padding:1.1rem 4rem 0; box-shadow:none; }
+body.continuous-mode .page + .page { padding-top:0; }
+body.continuous-mode .running-head, body.continuous-mode .page-number { position:static; display:none; }
+@media (max-width:600px) {
+  .reader-toolbar { padding:.55rem .75rem; font-size:.88rem; }
+  .book { padding:0; }
+  .page, body.continuous-mode .page { width:100%; min-height:0; margin:0; padding:1.2rem 1.15rem; box-shadow:none; }
+  .running-head, .page-number { position:static; display:block; margin-bottom:1rem; border:0; text-align:center; }
+  .page-number { margin:1rem 0 0; }
+  .page-content { font-size:16px; line-height:1.82; }
+  .footnote-popover { left:12px !important; right:12px !important; bottom:12px !important; top:auto !important; width:auto !important; max-height:54vh; }
+}

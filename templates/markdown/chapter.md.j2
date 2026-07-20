@@ -1,0 +1,13 @@
+---
+title: "{{ chapter.title_zh }}"
+original_title: "{{ chapter.title_en }}"
+book_title: "{{ book.title }}"
+author: "{{ book.author }}"
+chapter: {{ chapter.number }}
+language: "zh-CN"
+source_language: "en"
+translation_status: "complete"
+---
+
+{# The renderer supplies stable BLOCK_ID comments, inline page anchors, images and standard footnotes. #}
+{{ body }}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>{{ chapter.title_zh }} — {{ book.title }}</title>
+  <style>{{ css }}</style>
+</head>
+<body class="paged-mode">
+  <header class="reader-toolbar" aria-label="阅读模式">
+    <strong>{{ chapter.title_zh }}</strong>
+    <button id="reading-mode" type="button" aria-pressed="false">连续阅读模式</button>
+  </header>
+  <main id="book" class="book" aria-label="{{ chapter.title_zh }}">
+  {% for page in pages %}
+    <section class="page" data-pdf-page="{{ page.number }}" aria-label="PDF 第 {{ page.number }} 页">
+      <header class="running-head">{{ book.title }} · {{ chapter.title_zh }}</header>
+      <div class="page-content">{{ page.content }}</div>
+      <footer class="page-number">{% if page.printed %}{{ page.printed }}{% else %}{{ page.number }}{% endif %}</footer>
+    </section>
+  {% endfor %}
+  </main>
+  {{ footnote_templates }}
+  <aside id="footnote-popover" class="footnote-popover" role="note" aria-live="polite" tabindex="-1" hidden>
+    <button type="button" class="footnote-close" aria-label="关闭注释">×</button>
+    <div class="footnote-content"></div>
+  </aside>
+  <script>{{ javascript }}</script>
+</body>
+</html>

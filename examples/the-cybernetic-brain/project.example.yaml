@@ -1,0 +1,43 @@
+toolkit_version: 0.2.0
+skill: ebook-translation-zh
+book:
+  title: "The Cybernetic Brain: Sketches of Another Future"
+  title_zh: "控制论大脑：另一种未来的速写"
+  author: "Andrew Pickering"
+  slug: the-cybernetic-brain
+source:
+  pdf: source/original.pdf
+language:
+  source: en
+  target: zh-CN
+chapter:
+  number: 1
+  title_en: The Adaptive Brain
+  title_zh: 适应性大脑
+  pdf_start: 12
+  pdf_end: 27
+obsidian:
+  vault: '<OBSIDIAN_VAULT>'
+  destination: '_Agent/Outputs/Book-Translations/the-cybernetic-brain'
+render:
+  html:
+    inline_footnotes: true
+    append_footnote_section: false
+    italic_visual_style: false
+    reading_modes: [paged, continuous]
+  markdown:
+    standard_footnotes: true
+  epub:
+    enabled: true
+    output: 'output/epub/the-cybernetic-brain-zh.epub'
+    cover: 'assets/epub/cover.jpg'
+    identifier_file: '.ebook-translation/epub-identifier.txt'
+paragraphs:
+  merge_across_pdf_pages: true
+  page_markers_inside_blocks: true
+images:
+  insert_only_after_complete_block: true
+terms:
+  bilingual_first_occurrence: true
+epub:
+  identifier_file: '.ebook-translation/epub-identifier.txt'

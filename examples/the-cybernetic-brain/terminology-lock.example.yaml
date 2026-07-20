@@ -1,0 +1,36 @@
+version: 1
+locked_terms:
+  - id: person-stuart-kauffman
+    english:
+      - Stuart Kauffman
+      - Stuart A. Kauffman
+    preferred_zh: "斯图尔特·考夫曼"
+    deprecated_zh:
+      - "斯图亚特·考夫曼"
+    category: PERSON
+    require_english_on_first_occurrence: true
+  - id: philosophy-heidegger-enframing
+    english:
+      - enframing
+      - Gestell
+    preferred_zh: "框定"
+    deprecated_zh:
+      - "座架"
+    category: PHILOSOPHICAL_TERM
+    context_required:
+      - Heidegger
+      - philosophy of technology
+      - technology
+    exclude_ordinary_context: true
+  - id: philosophy-heidegger-revealing
+    english:
+      - revealing
+    preferred_zh: "显露"
+    deprecated_zh:
+      - "揭示"
+    category: PHILOSOPHICAL_TERM
+    context_required:
+      - Heidegger
+      - philosophy of technology
+      - unconcealment
+    exclude_ordinary_context: true

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chapter-translation.schema.json",
+  "title": "Structured translated chapter",
+  "allOf": [
+    {"$ref": "chapter-source.schema.json"},
+    {"type": "object", "properties": {"blocks": {"type": "array", "items": {"type": "object", "required": ["block_id", "source_text", "translated_text"], "properties": {"translated_text": {"type": "string", "minLength": 1}}}}}}
+  ]
+}

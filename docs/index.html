@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>ebook-translation-toolkit</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<style>
+  :root {
+    --fg: #1f2328; --muted: #57606a; --bg: #ffffff;
+    --accent: #0969da; --border: #d0d7de;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fg: #e6edf3; --muted: #8d96a0; --bg: #0d1117;
+      --accent: #58a6ff; --border: #30363d;
+    }
+  }
+  body {
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--fg); background: var(--bg);
+    max-width: 780px; margin: 2em auto; padding: 0 1em;
+  }
+  h1, h2, h3 { line-height: 1.25; }
+  h1 { border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+  h2 { margin-top: 1.8em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code, pre {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+  }
+  code { background: rgba(127,127,127,0.1); padding: 0.1em 0.3em; border-radius: 4px; }
+  pre { background: rgba(127,127,127,0.08); padding: 1em; border-radius: 6px; overflow-x: auto; }
+  .muted { color: var(--muted); }
+  .pill {
+    display: inline-block; padding: 0.15em 0.5em;
+    border: 1px solid var(--border); border-radius: 1em;
+    font-size: 0.85em; margin-right: 0.4em;
+  }
+  .grid {
+    display: grid; gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .card {
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 1em;
+  }
+  .footer { color: var(--muted); font-size: 0.85em; margin-top: 3em; border-top: 1px solid var(--border); padding-top: 1em; }
+  .mermaid {
+    text-align: center;
+    background: rgba(127,127,127,0.05);
+    padding: 1em; border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    overflow-x: auto;
+  }
+</style>
+</head>
+<body>
+
+<h1>ebook-translation-toolkit</h1>
+<p class="muted">
+  v0.2.0 &middot;
+  <a href="https://github.com/conanxin/ebook-translation-toolkit">github.com/conanxin/ebook-translation-toolkit</a> &middot;
+  <span class="pill">MIT</span>
+</p>
+
+<p>
+Structure-first PDF ebook translation pipeline for Chinese HTML, Markdown, Obsidian, and reflowable EPUB&nbsp;3.
+One PDF &rarr; structured chapter JSON &rarr; HTML + Markdown + Obsidian + EPUB 3, all
+from a single source of truth.
+</p>
+
+<h2>What it does</h2>
+<div class="grid">
+  <div class="card"><strong>PDF &rarr; structured JSON</strong><br/><span class="muted">Text-layer detection, OCR fallback, cross-page paragraph repair.</span></div>
+  <div class="card"><strong>Translation packets</strong><br/><span class="muted">One block per logical paragraph. Stable <code>block_id</code>.</span></div>
+  <div class="card"><strong>Terminology lock</strong><br/><span class="muted">Project-level <code>preferred_zh</code> / <code>deprecated_zh</code>.</span></div>
+  <div class="card"><strong>Footnotes</strong><br/><span class="muted">Inline popovers, standard <code>[^N]</code> in Markdown, EPUB 3 <code>&lt;aside&gt;</code>.</span></div>
+  <div class="card"><strong>Obsidian sync</strong><br/><span class="muted">Name-safe notes, [[wikilinks]], image copies.</span></div>
+  <div class="card"><strong>EPUB 3 deterministic</strong><br/><span class="muted">reflowable, no JS, byte-identical consecutive builds.</span></div>
+</div>
+
+<h2>Architecture</h2>
+<pre class="mermaid">PDF
+  &rarr; extract
+  &rarr; detect chapters
+  &rarr; normalize paragraphs
+  &rarr; translation packets
+  &rarr; translate / review
+  &rarr; structured chapter JSON
+  &rarr; HTML | Markdown | Obsidian | EPUB 3
+  &rarr; QA / regression / reproducibility</pre>
+
+<h2>Quick start</h2>
+
+<p><strong>PowerShell</strong></p>
+<pre><code>git clone https://github.com/conanxin/ebook-translation-toolkit
+cd ebook-translation-toolkit
+pip install -e ".[test]"
+pip install PyMuPDF PyYAML Jinja2 beautifulsoup4
+
+&amp; scripts/ebook-translate.ps1 init     -Pdf "&lt;PDF&gt;" -ProjectRoot "&lt;PROJECT_ROOT&gt;"
+&amp; scripts/ebook-translate.ps1 render-epub -ProjectRoot "&lt;PROJECT_ROOT&gt;"
+&amp; scripts/ebook-translate.ps1 validate-epub -Epub "&lt;PROJECT_ROOT&gt;\output\epub\&lt;slug&gt;-zh.epub"</code></pre>
+
+<p><strong>Bash / WSL</strong></p>
+<pre><code>git clone https://github.com/conanxin/ebook-translation-toolkit
+cd ebook-translation-toolkit
+pip install -e ".[test]"
+pip install PyMuPDF PyYAML Jinja2 beautifulsoup4
+
+scripts/ebook-translate.sh init     --pdf &lt;PDF&gt; --project-root &lt;PROJECT_ROOT&gt;
+scripts/ebook-translate.sh render-epub --project-root &lt;PROJECT_ROOT&gt;
+scripts/ebook-translate.sh validate-epub --epub &lt;PROJECT_ROOT&gt;/output/epub/&lt;slug&gt;-zh.epub</code></pre>
+
+<h2>Case study metrics</h2>
+<p>
+Private companion repo <code>conanxin/the-cybernetic-brain-zh-example</code> ships the complete 537-page translation of
+<em>The Cybernetic Brain: Sketches of Another Future</em>.
+This public toolkit is the engine that built it.
+</p>
+<table>
+<tbody>
+<tr><th>Source PDF pages</th><td>537</td></tr>
+<tr><th>Body chapters</th><td>8</td></tr>
+<tr><th>English source words</th><td>194,671</td></tr>
+<tr><th>Chinese characters</th><td>321,960</td></tr>
+<tr><th>Body images</th><td>85</td></tr>
+<tr><th>Footnotes</th><td>412</td></tr>
+<tr><th>Page anchors</th><td>334</td></tr>
+<tr><th>EPUB version</th><td>EPUB&nbsp;3 (reflowable)</td></tr>
+<tr><th>EPUB ZIP entries</th><td>101</td></tr>
+<tr><th>EPUB size</th><td>2,699,091 bytes</td></tr>
+<tr><th>EPUB SHA-256</th><td><code>158049c8&hellip;</code></td></tr>
+<tr><th>Tests</th><td>106 enumerated, 102 passed, 4 env-skipped, 0 failures, 0 errors</td></tr>
+</tbody>
+</table>
+
+<h2>Documentation</h2>
+<ul>
+  <li><a href="INDEX.html">Documentation index</a></li>
+  <li><a href="WORKFLOW.html">End-to-end workflow</a></li>
+  <li><a href="ARCHITECTURE.html">Architecture</a></li>
+  <li><a href="DATA_MODEL.html">Data model</a></li>
+  <li><a href="TRANSLATION_PIPELINE.html">Translation pipeline</a></li>
+  <li><a href="HTML_AND_OBSIDIAN.html">HTML &amp; Obsidian</a></li>
+  <li><a href="EPUB_PIPELINE.html">EPUB pipeline</a></li>
+  <li><a href="QUALITY_GATES.html">Quality gates</a></li>
+  <li><a href="TROUBLESHOOTING.html">Troubleshooting</a></li>
+  <li><a href="CASE_STUDY_THE_CYBERNETIC_BRAIN.html">Long-form case study</a></li>
+  <li><a href="DEVELOPMENT_HISTORY.html">28-stage build history</a></li>
+  <li><a href="ROADMAP.html">Roadmap</a></li>
+</ul>
+
+<p class="footer">
+Generated as part of the v0.2.0 publication.
+Source: <a href="https://github.com/conanxin/ebook-translation-toolkit">github.com/conanxin/ebook-translation-toolkit</a>.
+</p>
+
+</body>
+</html>

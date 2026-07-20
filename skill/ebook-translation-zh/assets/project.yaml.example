@@ -1,0 +1,9 @@
+toolkit_version: 0.1.0
+skill: ebook-translation-zh
+book: {title: "", author: "", slug: "book-slug"}
+source: {pdf: source/original.pdf}
+language: {source: en, target: zh-CN}
+chapter: {number: 1, title_en: "", title_zh: ""}
+obsidian: {vault: "", destination: ""}
+paragraphs: {merge_across_pdf_pages: true, page_markers_inside_blocks: true}
+images: {insert_only_after_complete_block: true}

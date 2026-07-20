@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chapter-source.schema.json",
+  "title": "Structured source chapter",
+  "type": "object",
+  "required": ["book", "chapter", "blocks", "images", "footnotes", "terms", "page_anchors"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "book": {"type": "object"},
+    "chapter": {"type": "object"},
+    "blocks": {"type": "array", "items": {"$ref": "#/$defs/block"}},
+    "images": {"type": "array", "items": {"$ref": "#/$defs/image"}},
+    "footnotes": {"type": "array", "items": {"$ref": "#/$defs/footnote"}},
+    "terms": {"type": "array"},
+    "page_anchors": {"type": "array", "items": {"$ref": "#/$defs/pageAnchor"}}
+  },
+  "$defs": {
+    "pageAnchor": {"type": "object", "required": ["pdf_page", "offset", "within_block"], "properties": {"pdf_page": {"type": "integer", "minimum": 1}, "printed_page": {"type": "string"}, "offset": {"type": "integer", "minimum": 0}, "within_block": {"type": "string"}}},
+    "footnoteRef": {"type": "object", "required": ["number", "offset"], "properties": {"number": {"type": "integer", "minimum": 1}, "offset": {"type": "integer", "minimum": 0}}},
+    "block": {"type": "object", "required": ["block_id", "type", "source_text", "source_pdf_page_start", "source_pdf_page_end", "page_anchors", "image_after", "footnote_refs", "styles", "reading_order"], "properties": {"block_id": {"type": "string", "pattern": "^[pb]-[0-9]{3}[a-z]?$"}, "type": {"type": "string"}, "source_text": {"type": "string"}, "translated_text": {"type": "string"}, "source_pdf_page_start": {"type": "integer"}, "source_pdf_page_end": {"type": "integer"}, "page_anchors": {"type": "array", "items": {"$ref": "#/$defs/pageAnchor"}}, "image_after": {"type": "array", "items": {"type": "string"}}, "footnote_refs": {"type": "array", "items": {"$ref": "#/$defs/footnoteRef"}}, "styles": {"type": "array", "items": {"type": "string"}}, "reading_order": {"type": "integer"}}},
+    "image": {"type": "object", "required": ["image_id", "path", "pdf_page", "after_block_id"], "properties": {"image_id": {"type": "string"}, "path": {"type": "string"}, "pdf_page": {"type": "integer"}, "after_block_id": {"type": "string"}, "sha256": {"type": "string"}}},
+    "footnote": {"type": "object", "required": ["number", "source_text"], "properties": {"number": {"type": "integer", "minimum": 1}, "source_text": {"type": "string"}, "translated_text": {"type": "string"}, "block_id": {"type": "string"}}}
+  }
+}

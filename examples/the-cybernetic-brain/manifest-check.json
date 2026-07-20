@@ -1,0 +1,10 @@
+{
+  "chapters": 8,
+  "html_files": ["index.html", "chapter-01-zh.html", "chapter-02-zh.html", "chapter-03-zh.html", "chapter-04-zh.html", "chapter-05-zh.html", "chapter-06-zh.html", "chapter-07-zh.html", "chapter-08-zh.html"],
+  "markdown_files": ["README.md", "chapter-01-zh.md", "chapter-02-zh.md", "chapter-03-zh.md", "chapter-04-zh.md", "chapter-05-zh.md", "chapter-06-zh.md", "chapter-07-zh.md", "chapter-08-zh.md"],
+  "image_chapters": ["chapter-01", "chapter-02", "chapter-03", "chapter-04", "chapter-05", "chapter-06", "chapter-07", "chapter-08"],
+  "image_total": 85,
+  "epub_zip_entries": 101,
+  "epub_size_bytes": 2699091,
+  "epub_sha256": "158049c890f713dac8197b6285382492a172196b707fbd7f61204d0293a49fe6"
+}

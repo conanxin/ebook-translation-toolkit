@@ -1,0 +1,306 @@
+{
+  "status": "PASS",
+  "html": "D:\\home\\conanxin\\workspace\\ebook-translation-toolkit\\.validation\\blank-book-2\\output\\html\\chapter-01-zh.html",
+  "results": [
+    {
+      "viewport": "1366x768",
+      "paged": {
+        "width": 1366,
+        "viewport": 1366,
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 400,
+            "right": 883,
+            "left": 483
+          },
+          {
+            "complete": true,
+            "naturalWidth": 401,
+            "right": 883.5,
+            "left": 482.5
+          }
+        ],
+        "triggers": 7,
+        "templates": 7,
+        "appendedNotes": 0
+      },
+      "notes": [
+        {
+          "number": 1,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 2,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 3,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 4,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 5,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 6,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 7,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        }
+      ],
+      "escape_closed": true,
+      "outside_closed": true,
+      "continuous": {
+        "active": true,
+        "width": 1366,
+        "viewport": 1366,
+        "pageMinHeight": "0px",
+        "imagesInside": true
+      },
+      "console_errors": [],
+      "non_file_requests": []
+    },
+    {
+      "viewport": "1920x1080",
+      "paged": {
+        "width": 1920,
+        "viewport": 1920,
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 400,
+            "right": 1160,
+            "left": 760
+          },
+          {
+            "complete": true,
+            "naturalWidth": 401,
+            "right": 1160.5,
+            "left": 759.5
+          }
+        ],
+        "triggers": 7,
+        "templates": 7,
+        "appendedNotes": 0
+      },
+      "notes": [
+        {
+          "number": 1,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 2,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 3,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 4,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 5,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 6,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 7,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        }
+      ],
+      "escape_closed": true,
+      "outside_closed": true,
+      "continuous": {
+        "active": true,
+        "width": 1920,
+        "viewport": 1920,
+        "pageMinHeight": "0px",
+        "imagesInside": true
+      },
+      "console_errors": [],
+      "non_file_requests": []
+    },
+    {
+      "viewport": "390x844",
+      "paged": {
+        "width": 390,
+        "viewport": 390,
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 400,
+            "right": 371.59375,
+            "left": 18.390625
+          },
+          {
+            "complete": true,
+            "naturalWidth": 401,
+            "right": 371.59375,
+            "left": 18.390625
+          }
+        ],
+        "triggers": 7,
+        "templates": 7,
+        "appendedNotes": 0
+      },
+      "notes": [
+        {
+          "number": 1,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 2,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 3,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 4,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 5,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 6,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        },
+        {
+          "number": 7,
+          "visible": true,
+          "text_length": 7,
+          "expanded": "true",
+          "hash": "",
+          "within_viewport": true,
+          "second_click_closed": true
+        }
+      ],
+      "escape_closed": true,
+      "outside_closed": true,
+      "continuous": {
+        "active": true,
+        "width": 390,
+        "viewport": 390,
+        "pageMinHeight": "0px",
+        "imagesInside": true
+      },
+      "console_errors": [],
+      "non_file_requests": []
+    }
+  ]
+}

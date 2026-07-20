@@ -1,0 +1,43 @@
+book
+  epub
+    the-cybernetic-brain-zh.epub    # final EPUB
+  html
+    index.html                      # book-wide index
+    chapter-01-zh.html              # 适应性大脑
+    chapter-02-zh.html              # 本体论剧场
+    chapter-03-zh.html
+    chapter-04-zh.html
+    chapter-05-zh.html
+    chapter-06-zh.html
+    chapter-07-zh.html
+    chapter-08-zh.html
+  markdown
+    README.md
+    chapter-01-zh.md .. chapter-08-zh.md
+  assets
+    chapter-01 .. chapter-08        # 85 body images
+    epub
+      cover.jpg                     # 1296x1944 cover
+config
+  project.yaml                      # scrubbed project config
+  terminology-lock.yaml             # 3 locked terms
+reports
+  FINAL_BOOK_TRANSLATION_REPORT.md  # whole-book QA summary
+  FINAL_TERMINOLOGY_HARMONIZATION_REPORT.md  # terminology harmonization
+  EPUB_BUILD_REPORT.md              # EPUB build summary
+  EPUB_VALIDATION_REPORT.md         # validator output
+  EPUB_REPRODUCIBILITY_REPORT.md    # reproducible build record
+  EPUB_XHTML_BROWSER_CHECK.md       # Chromium XHTML probe record
+scripts
+  verify-example.py                 # case-study integrity check
+  open-html.bat                     # open the book in the default browser
+  open-epub.bat                     # open the EPUB in the default reader
+  verify.sh                         # shell wrapper for the verifier
+
+Never present:
+  source/original.pdf               # original PDF never committed
+  intermediate/                     # raw extraction never committed
+  .venv / __pycache__               # virtual environments and bytecode
+  validation-unpacked/              # unpacked EPUB scratch
+  .obsidian/                        # Obsidian app state
+  machine paths under D:\ or /mnt/ or /home/<user>/

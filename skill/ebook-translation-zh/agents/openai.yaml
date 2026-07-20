@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ebook Translation ZH"
+  short_description: "Structure-first Chinese ebook translation"
+  default_prompt: "Use $ebook-translation-zh to translate this PDF book chapter into structured Chinese HTML, Markdown, and Obsidian output."
+policy:
+  allow_implicit_invocation: true

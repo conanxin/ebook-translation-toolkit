@@ -1,0 +1,48 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[test]"
+          pip install PyMuPDF PyYAML Jinja2 beautifulsoup4
+
+      - name: Run unit tests
+        run: |
+          python -m unittest discover -s tests -p "test_*.py" -v
+
+      - name: CLI smoke tests
+        run: |
+          python -m ebook_translation_toolkit --help > /tmp/cli_help.txt
+          python -m ebook_translation_toolkit render-epub --help > /tmp/render_epub_help.txt
+          python -m ebook_translation_toolkit validate-epub --help > /tmp/validate_epub_help.txt
+          python -m ebook_translation_toolkit check-terminology-lock --help > /tmp/tl_help.txt
+          test -s /tmp/cli_help.txt
+          test -s /tmp/render_epub_help.txt
+          test -s /tmp/validate_epub_help.txt
+          test -s /tmp/tl_help.txt
+
+      - name: Terminology-lock test
+        run: |
+          # Run the standalone terminology-lock test (does not need a real book).
+          python -m unittest tests.test_terminology_lock -v

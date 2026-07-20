@@ -1,0 +1,83 @@
+name: package
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install build tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install build wheel
+
+      - name: Build wheel + sdist
+        run: |
+          python -m build --sdist --wheel --outdir dist/
+
+      - name: Smoke test the wheel
+        run: |
+          pip install dist/*.whl
+          ebook-translate --help > /tmp/help.txt
+          ebook-translate render-epub --help > /tmp/render_help.txt
+          ebook-translate validate-epub --help > /tmp/validate_help.txt
+          test -s /tmp/help.txt
+          test -s /tmp/render_help.txt
+          test -s /tmp/validate_help.txt
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebook-translation-toolkit-dist
+          path: dist/
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ebook-translation-toolkit-dist
+          path: dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.whl
+            dist/*.tar.gz
+          generate_release_notes: false
+          body: |
+            ## ebook-translation-toolkit ${{ github.ref_name }}
+
+            Initial public release of the structure-first PDF ebook translation
+            toolkit. See [README](../blob/main/README.md), the long-form
+            [case study](../blob/main/docs/CASE_STUDY_THE_CYBERNETIC_BRAIN.md),
+            and [DEVELOPMENT_HISTORY](../blob/main/docs/DEVELOPMENT_HISTORY.md).
+
+            ### Attachments
+
+            - `*.whl` — installable wheel
+            - `*.tar.gz` — source distribution
+
+            The complete translated book is **not** bundled with this release;
+            it lives in the private companion repository.

@@ -1,0 +1,50 @@
+{
+  "book": {
+    "title": "The Cybernetic Brain: Sketches of Another Future",
+    "title_zh": "控制论大脑：另一种未来的速写",
+    "author": "Andrew Pickering",
+    "slug": "the-cybernetic-brain",
+    "source_pdf_pages": 537
+  },
+  "translation": {
+    "english_source_words": 194671,
+    "chinese_characters": 321960,
+    "chapters": 8,
+    "qa_status": "PASS"
+  },
+  "content": {
+    "body_images": 85,
+    "footnotes_total": 412,
+    "footnotes_per_chapter": {
+      "1": 7,
+      "2": 12,
+      "3": 85,
+      "4": 76,
+      "5": 59,
+      "6": 81,
+      "7": 73,
+      "8": 19
+    },
+    "page_anchors_total": 334
+  },
+  "formats": {
+    "html": "output/html/chapter-01-zh.html .. chapter-08-zh.html + index.html",
+    "markdown": "output/markdown/chapter-01-zh.md .. chapter-08-zh.md + README.md",
+    "obsidian": "synced per chapter via obsidian_sync.py",
+    "epub": {
+      "version": "EPUB 3",
+      "layout": "reflowable",
+      "language": "zh-CN",
+      "zip_entries": 101,
+      "file_size_bytes": 2699091,
+      "sha256": "158049c890f713dac8197b6285382492a172196b707fbd7f61204d0293a49fe6"
+    }
+  },
+  "tests": {
+    "total_run": 106,
+    "passed": 102,
+    "skipped_environment_only": 4,
+    "failures": 0,
+    "errors": 0
+  }
+}

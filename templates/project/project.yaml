@@ -1,0 +1,18 @@
+toolkit_version: 0.1.0
+skill: ebook-translation-zh
+book:
+  title: ""
+  author: ""
+  slug: ""
+source:
+  pdf: source/original.pdf
+language:
+  source: en
+  target: zh-CN
+chapter:
+  number: 1
+  title_en: ""
+  title_zh: ""
+obsidian:
+  vault: ""
+  destination: ""

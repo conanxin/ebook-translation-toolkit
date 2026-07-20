@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "project.schema.json",
+  "title": "Ebook translation project",
+  "type": "object",
+  "required": ["toolkit_version", "skill", "book", "source", "language", "chapter", "obsidian", "render"],
+  "properties": {
+    "toolkit_version": {"type": "string", "const": "0.1.0"},
+    "skill": {"type": "string", "const": "ebook-translation-zh"},
+    "book": {"type": "object", "required": ["slug"], "properties": {"title": {"type": "string"}, "author": {"type": "string"}, "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}}},
+    "source": {"type": "object", "required": ["pdf"], "properties": {"pdf": {"type": "string"}}},
+    "language": {"type": "object", "required": ["source", "target"]},
+    "chapter": {"type": "object", "required": ["number"], "properties": {"number": {"type": "integer", "minimum": 1}, "pdf_start": {"type": ["integer", "null"]}, "pdf_end": {"type": ["integer", "null"]}}},
+    "obsidian": {"type": "object"},
+    "render": {"type": "object"}
+  },
+  "additionalProperties": true
+}

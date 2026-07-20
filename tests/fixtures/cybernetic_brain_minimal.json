@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "book": {"title": "The Cybernetic Brain: Sketches of Another Future", "title_zh": "控制论大脑", "author": "Andrew Pickering"},
+  "chapter": {"number": 1, "title_en": "The Adaptive Brain", "title_zh": "适应性大脑", "pdf_start": 12, "pdf_end": 27},
+  "blocks": [
+    {"block_id":"p-001","type":"paragraph","source_text":"A paragraph continues across the page boundary.","translated_text":"控制论（cybernetics）由诺伯特·维纳（Norbert Wiener）讨论，并跨页继续为同一段。","source_pdf_page_start":12,"source_pdf_page_end":13,"printed_page_start":"1","printed_page_end":"2","page_anchors":[{"pdf_page":13,"printed_page":"2","offset":23,"within_block":"p-001"}],"image_after":["figure-001"],"footnote_refs":[],"styles":[],"reading_order":1},
+    {"block_id":"p-002","type":"paragraph","source_text":"The next logical paragraph also crosses a page.","translated_text":"W. 罗斯·阿什比（W. Ross Ashby）、W. 格雷·沃尔特（W. Grey Walter）和戈登·帕斯克（Gordon Pask）共同构成检索语境。","source_pdf_page_start":14,"source_pdf_page_end":15,"printed_page_start":"3","printed_page_end":"4","page_anchors":[{"pdf_page":15,"printed_page":"4","offset":30,"within_block":"p-002"}],"image_after":[],"footnote_refs":[],"styles":[],"reading_order":2},
+    {"block_id":"p-003","type":"paragraph","source_text":"This paragraph remains one block.","translated_text":"斯塔福德·比尔（Stafford Beer）、沃伦·麦卡洛克（Warren McCulloch）与格雷戈里·贝特森（Gregory Bateson）在同一逻辑段中。","source_pdf_page_start":16,"source_pdf_page_end":17,"printed_page_start":"5","printed_page_end":"6","page_anchors":[{"pdf_page":17,"printed_page":"6","offset":31,"within_block":"p-003"}],"image_after":[],"footnote_refs":[{"number":1,"offset":63}],"styles":[],"reading_order":3},
+    {"block_id":"p-004","type":"paragraph","source_text":"Page changes are internal anchors.","translated_text":"R. D. 莱因（R. D. Laing）、肯尼斯·克雷克（Kenneth Craik）和海因茨·冯·福斯特（Heinz von Foerster）没有被分页拆开。","source_pdf_page_start":17,"source_pdf_page_end":18,"printed_page_start":"6","printed_page_end":"7","page_anchors":[{"pdf_page":18,"printed_page":"7","offset":29,"within_block":"p-004"}],"image_after":[],"footnote_refs":[{"number":2,"offset":73}],"styles":[],"reading_order":4},
+    {"block_id":"p-005","type":"paragraph","source_text":"The image follows a completed paragraph.","translated_text":"萨尔瓦多·阿连德（Salvador Allende）、布莱恩·伊诺（Brian Eno）与威廉·巴勒斯（William Burroughs）之后，段落完整结束。","source_pdf_page_start":18,"source_pdf_page_end":19,"printed_page_start":"7","printed_page_end":"8","page_anchors":[{"pdf_page":19,"printed_page":"8","offset":31,"within_block":"p-005"}],"image_after":["figure-002"],"footnote_refs":[],"styles":[],"reading_order":5},
+    {"block_id":"p-006","type":"paragraph","source_text":"Context continues across pages.","translated_text":"克里斯托弗·亚历山大（Christopher Alexander）参加梅西会议（Macy Conferences），比率俱乐部（Ratio Club）也在叙述中出现。","source_pdf_page_start":20,"source_pdf_page_end":21,"printed_page_start":"9","printed_page_end":"10","page_anchors":[{"pdf_page":21,"printed_page":"10","offset":35,"within_block":"p-006"}],"image_after":[],"footnote_refs":[{"number":3,"offset":82}],"styles":[],"reading_order":6},
+    {"block_id":"p-007","type":"paragraph","source_text":"Institution names retain English once.","translated_text":"英国广播公司（BBC）、麻省理工学院电子学研究实验室（MIT Research Laboratory of Electronics）与生物计算机实验室（Biological Computer Laboratory）首次保留英文。","source_pdf_page_start":21,"source_pdf_page_end":22,"printed_page_start":"10","printed_page_end":"11","page_anchors":[{"pdf_page":22,"printed_page":"11","offset":44,"within_block":"p-007"}],"image_after":[],"footnote_refs":[{"number":4,"offset":115}],"styles":[],"reading_order":7},
+    {"block_id":"p-008","type":"paragraph","source_text":"More institutions and titles occur.","translated_text":"布鲁内尔大学控制论系（Department of Cybernetics, Brunel University）和伦敦当代艺术学院（Institute of Contemporary Arts，ICA）展出《大脑设计》（Design for a Brain）。","source_pdf_page_start":24,"source_pdf_page_end":25,"printed_page_start":"13","printed_page_end":"14","page_anchors":[{"pdf_page":25,"printed_page":"14","offset":50,"within_block":"p-008"}],"image_after":[],"footnote_refs":[{"number":5,"offset":119}],"styles":[],"reading_order":8},
+    {"block_id":"p-009","type":"paragraph","source_text":"Book titles remain searchable.","translated_text":"《活的大脑》（The Living Brain）、《企业的大脑》（Brain of the Firm）、《形式综合论札记》（Notes on the Synthesis of Form）与《裸体午餐》（Naked Lunch）均可检索。","source_pdf_page_start":25,"source_pdf_page_end":26,"printed_page_start":"14","printed_page_end":"15","page_anchors":[{"pdf_page":26,"printed_page":"15","offset":48,"within_block":"p-009"}],"image_after":[],"footnote_refs":[{"number":6,"offset":112}],"styles":["italic"],"reading_order":9},
+    {"block_id":"p-010","type":"paragraph","source_text":"The final cross-page rule is preserved.","translated_text":"控制论奇遇（Cybernetic Serendipity）与《活动体会谈》（Colloquy of Mobiles）仍保持正常字形。","source_pdf_page_start":26,"source_pdf_page_end":27,"printed_page_start":"15","printed_page_end":"16","page_anchors":[{"pdf_page":27,"printed_page":"16","offset":32,"within_block":"p-010"}],"image_after":[],"footnote_refs":[{"number":7,"offset":62}],"styles":[],"reading_order":10}
+  ],
+  "images": [
+    {"image_id":"figure-001","path":"assets/chapter-01/figure-001.jpg","pdf_page":13,"bbox":[0,0,100,100],"caption_source":"Figure 1.1","caption_zh":"图 1.1　赛博格一家。","sha256":"","after_block_id":"p-001"},
+    {"image_id":"figure-002","path":"assets/chapter-01/figure-002.jpg","pdf_page":16,"bbox":[0,0,100,100],"caption_source":"Figure 1.2","caption_zh":"图 1.2　控制论的四位先驱。","sha256":"","after_block_id":"p-005"}
+  ],
+  "footnotes": [
+    {"number":1,"source_text":"Note one.","translated_text":"注释一。","block_id":"p-003"}, {"number":2,"source_text":"Note two.","translated_text":"注释二。","block_id":"p-004"},
+    {"number":3,"source_text":"Note three.","translated_text":"注释三。","block_id":"p-006"}, {"number":4,"source_text":"Note four.","translated_text":"注释四。","block_id":"p-007"},
+    {"number":5,"source_text":"Note five.","translated_text":"注释五。","block_id":"p-008"}, {"number":6,"source_text":"Note six.","translated_text":"注释六。","block_id":"p-009"},
+    {"number":7,"source_text":"Note seven.","translated_text":"注释七。","block_id":"p-010"}
+  ],
+  "terms": [
+    {"english":"Norbert Wiener","chinese":"诺伯特·维纳","category":"PERSON","first_block_id":"p-001","notes":""},
+    {"english":"W. Ross Ashby","chinese":"W. 罗斯·阿什比","category":"PERSON","first_block_id":"p-002","notes":""},
+    {"english":"W. Grey Walter","chinese":"W. 格雷·沃尔特","category":"PERSON","first_block_id":"p-002","notes":""},
+    {"english":"Gordon Pask","chinese":"戈登·帕斯克","category":"PERSON","first_block_id":"p-002","notes":""},
+    {"english":"Stafford Beer","chinese":"斯塔福德·比尔","category":"PERSON","first_block_id":"p-003","notes":""},
+    {"english":"Warren McCulloch","chinese":"沃伦·麦卡洛克","category":"PERSON","first_block_id":"p-003","notes":""},
+    {"english":"Gregory Bateson","chinese":"格雷戈里·贝特森","category":"PERSON","first_block_id":"p-003","notes":""},
+    {"english":"R. D. Laing","chinese":"R. D. 莱因","category":"PERSON","first_block_id":"p-004","notes":""},
+    {"english":"Kenneth Craik","chinese":"肯尼斯·克雷克","category":"PERSON","first_block_id":"p-004","notes":""},
+    {"english":"Heinz von Foerster","chinese":"海因茨·冯·福斯特","category":"PERSON","first_block_id":"p-004","notes":""},
+    {"english":"Salvador Allende","chinese":"萨尔瓦多·阿连德","category":"PERSON","first_block_id":"p-005","notes":""},
+    {"english":"Brian Eno","chinese":"布莱恩·伊诺","category":"PERSON","first_block_id":"p-005","notes":""},
+    {"english":"William Burroughs","chinese":"威廉·巴勒斯","category":"PERSON","first_block_id":"p-005","notes":""},
+    {"english":"Christopher Alexander","chinese":"克里斯托弗·亚历山大","category":"PERSON","first_block_id":"p-006","notes":""},
+    {"english":"Macy Conferences","chinese":"梅西会议","category":"CONFERENCE","first_block_id":"p-006","notes":""},
+    {"english":"Ratio Club","chinese":"比率俱乐部","category":"ORGANIZATION","first_block_id":"p-006","notes":""},
+    {"english":"BBC","chinese":"英国广播公司","category":"ORGANIZATION","first_block_id":"p-007","notes":""},
+    {"english":"MIT Research Laboratory of Electronics","chinese":"麻省理工学院电子学研究实验室","category":"ORGANIZATION","first_block_id":"p-007","notes":""},
+    {"english":"Biological Computer Laboratory","chinese":"生物计算机实验室","category":"ORGANIZATION","first_block_id":"p-007","notes":""},
+    {"english":"Department of Cybernetics, Brunel University","chinese":"布鲁内尔大学控制论系","category":"ORGANIZATION","first_block_id":"p-008","notes":""},
+    {"english":"Institute of Contemporary Arts，ICA","chinese":"伦敦当代艺术学院","category":"ORGANIZATION","first_block_id":"p-008","notes":""},
+    {"english":"Design for a Brain","chinese":"大脑设计","category":"BOOK","first_block_id":"p-008","notes":""},
+    {"english":"The Living Brain","chinese":"活的大脑","category":"BOOK","first_block_id":"p-009","notes":""},
+    {"english":"Brain of the Firm","chinese":"企业的大脑","category":"BOOK","first_block_id":"p-009","notes":""},
+    {"english":"Notes on the Synthesis of Form","chinese":"形式综合论札记","category":"BOOK","first_block_id":"p-009","notes":""},
+    {"english":"Naked Lunch","chinese":"裸体午餐","category":"BOOK","first_block_id":"p-009","notes":""},
+    {"english":"Cybernetic Serendipity","chinese":"控制论奇遇","category":"PROJECT","first_block_id":"p-010","notes":""},
+    {"english":"Colloquy of Mobiles","chinese":"活动体会谈","category":"BOOK","first_block_id":"p-010","notes":""}
+  ],
+  "page_anchors": []
+}
