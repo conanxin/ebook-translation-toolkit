@@ -12,9 +12,9 @@ A structure-first PDF ebook translation pipeline for Chinese HTML, Markdown, Obs
 
 ## Why
 
-When translating a long-form academic book from English to Chinese, three structural problems keep biting:
+When translating a long-form academic book from English to Chinese, four structural problems keep biting:
 
-1. **PDF page boundaries split paragraphs.** A logical paragraph that crosses a page is broken into two block in naïve extractors.
+1. **PDF page boundaries split paragraphs.** A logical paragraph that crosses a page is broken into two blocks in naïve extractors.
 2. **Figures are inserted mid-paragraph**, then translated as if they were text.
 3. **Footnotes jump to the end of the book** in HTML / EPUB instead of staying close to the call site.
 4. **Same translator uses two names for Stuart Kauffman**, and "Gestell" is rendered as 框定 in five chapters and 座架 in one.
